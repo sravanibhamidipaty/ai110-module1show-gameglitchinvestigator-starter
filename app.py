@@ -68,7 +68,7 @@ with col3:
 
 if new_game:
     st.session_state.secret = random.randint(1, 100)
-    st.session_state.status = "playing"
+    st.session_state.status = "playing" # FIX: Added the state logic and keeping the memory for the streamlit app while playing the game with Gemini Agent.
     st.session_state.score = 0
     st.session_state.history = []
     st.success("New game started.")

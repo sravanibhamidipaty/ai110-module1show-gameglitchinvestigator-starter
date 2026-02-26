@@ -15,6 +15,7 @@ def parse_guess(raw: str):
 
     Returns: (ok: bool, guess_int: int | None, error_message: str | None)
     """
+    # FIX: Refactored logic into logic_utils.py using Gemini Agent mode moved from app.py to logic_utils.py
     if raw is None or raw == "":
         return False, None, "Enter a guess."
 
@@ -38,6 +39,7 @@ def check_guess(guess, secret):
     if guess == secret:
         return "Win", "🎉 Correct!"
 
+    # FIX: Changed guess the Go LOWER and Go HIGHER logic using Gemini Agent
     if guess > secret:
         return "Too High", "📉 Go LOWER!"
     else:
